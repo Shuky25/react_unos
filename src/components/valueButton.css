@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 20px;
+    border: none;
+    transition: 0.2s;
+    width: 75px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+#sirok {
+    padding: 20px;
+    border: none;
+    transition: 0.2s;
+    width: 75px;
+    background-color: #437d9e;
+    color: #fff;
+}
+
+button:hover {
+    cursor: pointer;
+    color: #333;
+    background-color: #d3d3d3;
+}
+
+#sirok:hover {
+    cursor: pointer;
+    color: #333;
+    background-color: #84b9d8;
+}
