@@ -8,7 +8,7 @@ export default function Layout() {
           <nav>
             <ul>
               <li>
-                <Link to="/aplikacija">Pocetna</Link>
+                <Link to="/">Pocetna</Link>
               </li>
               <li>
                 <Link to="/unos">Unos</Link>

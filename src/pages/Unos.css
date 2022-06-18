@@ -17,8 +17,9 @@ form div input {
   width: 100%;
 }
 
-form button {
+form .dugme {
   padding: 5px 10px;
+  color: #fff;
   text-align: center;
   border: 2px solid rgb(33, 105, 146);
   background-color: rgb(33, 105, 146);
@@ -28,7 +29,7 @@ form button {
   margin: 10px auto;
 }
 
-form button:hover {
+form .dugme:hover {
   background-color: rgb(51, 134, 182);
   color: #fff;
 }

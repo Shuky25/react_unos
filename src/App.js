@@ -1,21 +1,22 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Aplikacija from "./pages/Aplikacija";
-import Layout from "./pages/Layout";
 import Unos from "./pages/Unos";
+import Layout from "./pages/Layout";
+import Footer from "./Footer";
 
 function App() {
-  return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route path="/aplikacija" element={<Aplikacija />} />
-            <Route path="/unos" element={<Unos />} />
-          </Route>
-          <Route />
-        </Routes>
-      </BrowserRouter>
-  );
+    return (
+        <Router>
+            <Layout />
+            <Routes>
+                <Route exact path="/" element={<Aplikacija />} />
+                <Route path="/unos" element={<Unos />} />
+                
+            </Routes>
+            <Footer />
+        </Router>
+    );
 }
 
 export default App;

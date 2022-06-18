@@ -1,21 +1,22 @@
 import "./Unos.css";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Unos = () => {
-    let txt = "";
+   let [txt, setTxt] = useState("");
 
     const navigate = useNavigate();
-  
-    const prosledi = (e) => {
-      e.preventDefault();
-      navigate("../Aplikacija", {state: {ime: txt}});
+
+    const prosledi = e => {
+        e.preventDefault();
+        navigate("/", { state: txt });
     };
-  
-    const kupljenje = (e) => {
-      if (e.target.value != null)
-        txt = e.target.value;
-      else
-        txt = "ovde se unosi tekst";
+
+    const kupljenje = e => {
+        setTxt(e.target.value);
+
+        //let polje = document.querySelector('input').value;
+        //setTxt(polje);
     };
 
 
@@ -26,11 +27,9 @@ const Unos = () => {
                 <div>
                     <label>Tekst: </label>
                     <br />
-                    <input name="tekst" id="tekst" type="text" placeholder="Unesite text" onChange={kupljenje}/>
+                    <input name="tekst" type="text" placeholder="Unesite text" onChange={kupljenje} defaultValue=" " />
                 </div>
-                <button type="submit" className="dugme">
-                    Unesi
-                </button>
+                <input type="submit" className="dugme" value="Potvrdi" />
             </form>
         </>
     );
