@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const Unos = () => {
-   let [txt, setTxt] = useState("");
+   const [txt, setTxt] = useState("");
 
     const navigate = useNavigate();
 
@@ -14,7 +14,7 @@ const Unos = () => {
 
     const kupljenje = e => {
         setTxt(e.target.value);
-
+        //setState({...state, [e.target.name]: e.target.value});
         //let polje = document.querySelector('input').value;
         //setTxt(polje);
     };
@@ -27,7 +27,7 @@ const Unos = () => {
                 <div>
                     <label>Tekst: </label>
                     <br />
-                    <input name="tekst" type="text" placeholder="Unesite text" onChange={kupljenje} defaultValue=" " />
+                    <input name="tekst" type="text" placeholder="Unesite text" onChange={kupljenje} />
                 </div>
                 <input type="submit" className="dugme" value="Potvrdi" />
             </form>
